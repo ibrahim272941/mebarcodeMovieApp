@@ -22,7 +22,7 @@ const Login = () => {
   };
   return (
     <div className="login">
-      <Form className="form" onSubmit={handleSubmit}>
+      <Form className="formLogin" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -40,10 +40,11 @@ const Login = () => {
             placeholder="Password"
           />
         </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <div className="buttonLogin">
+          <Button className="w-50" variant="warning" type="submit">
+            Submit
+          </Button>
+        </div>
       </Form>
     </div>
   );

@@ -16,10 +16,18 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
+      <div className="title">
+        <Link style={{ textDecoration: 'none' }} to="/">
+          <h1>
+            Movie <span>DataBase</span>
+            {currentUser && <h6>Go To Home Page</h6>}
+          </h1>
+        </Link>
+      </div>
       <div className="warning">
         <p className="info">
-          {path === '/login' && "Don't you have an account"}
-          {path === '/register' && 'Already have an account'}
+          {path === '/login' && "Don't you have an account "}
+          {path === '/register' && 'Already have an account '}
           <Link
             className="link"
             to={`${path === '/login' ? '/register' : '/login'}`}
@@ -29,25 +37,29 @@ const Navbar = () => {
           </Link>
         </p>
       </div>
-      {currentUser && (
+      {currentUser ? (
+        <div className="logout">
+          {currentUser && <h6>{currentUser.displayName}</h6>}
+          {currentUser && (
+            <button onClick={() => signOutFunc()} type="button">
+              Logout
+            </button>
+          )}
+        </div>
+      ) : null}
+    </div>
+  );
+};
+
+export default Navbar;
+
+{
+  /* {currentUser && (
         <Link style={{ textDecoration: 'none' }} to="/">
           <h2>
             Movie <span>DataBase</span>
             <h6>Go To Home Page</h6>
           </h2>
         </Link>
-      )}
-
-      <div className="logout">
-        {currentUser && <h6>{currentUser.displayName}</h6>}
-        {currentUser && (
-          <button onClick={() => signOutFunc()} type="button">
-            Logout
-          </button>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default Navbar;
+      )} */
+}

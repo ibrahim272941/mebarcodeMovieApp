@@ -1,46 +1,24 @@
-.login {
-    height: 100vh;
+.register {
+    height: calc(100%-1rem);
     display: flex;
+    justify-content: center;
     width: 100%;
 
-    align-items: center;
+
 
 }
 
 .form {
-    width: 50%;
-    margin: auto;
 
-}
-
-.button {
-    text-align: center;
+    margin-top: .5rem;
     width: 35%;
-    margin: auto;
+
+
+
 }
 
-.warning {
-    font-size: 1rem;
-    text-decoration: none;
-    color: rgb(54, 48, 48);
-    font-weight: 400;
-
-
-
-    width: 100%;
+.buttonRegister {
+    color: rgb(54, 31, 1);
     text-align: center;
 
-
-
-
-}
-
-.info {
-    width: 100%;
-}
-
-.link {
-
-    color: rgb(82, 48, 4);
-    font-weight: 600;
 }

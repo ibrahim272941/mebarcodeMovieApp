@@ -25,7 +25,7 @@ const Register = () => {
     }
   };
   return (
-    <div className=" login">
+    <div className=" register">
       <Form className="form" onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Label>Name</Form.Label>
@@ -61,9 +61,11 @@ const Register = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <div className="buttonRegister">
+          <Button className="w-50" variant="warning" type="submit">
+            Submit
+          </Button>
+        </div>
       </Form>
     </div>
   );
