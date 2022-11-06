@@ -40,17 +40,12 @@ const Slider = ({ movie }) => {
         <Carousel.Item className="d-flex justify-content-center slider" key={i}>
           <img
             onClick={(e) => handleClick(img)}
-            style={{
-              height: '17rem',
-              width: '90%',
-              alignItems: 'center',
-              borderRadius: '1.2rem',
-            }}
+            style={{}}
             src={IMG_API + img.backdrop_path}
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>{img.title}</h3>
+            <p className="filmTitle">{img.title}</p>
           </Carousel.Caption>
         </Carousel.Item>
       ))}

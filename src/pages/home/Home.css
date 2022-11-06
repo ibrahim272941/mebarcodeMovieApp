@@ -15,7 +15,8 @@
 }
 
 .search-form form {
-    width: 40%;
+    width: 68%;
+
 
 }
 
@@ -28,5 +29,6 @@
     color: aliceblue;
     height: 2rem;
     border-radius: 1rem;
+    padding: 1rem;
 
 }

@@ -1,0 +1,49 @@
+.slider img {
+    height: 17rem;
+    border-radius: 1.2rem;
+    width: 90%;
+    align-items: center;
+
+}
+
+.filmTitle {
+    font-size: 1.7rem;
+    color: antiquewhite;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-shadow: 1px 1px #9f9d9d;
+
+}
+
+@media(max-width:750px) {
+    .slider img {
+        height: 14rem;
+
+    }
+
+    .filmTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:550px) {
+    .slider img {
+        height: 11rem;
+
+    }
+
+    .filmTitle {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:450px) {
+    .slider img {
+        height: 9rem;
+
+    }
+
+    .title {
+        font-size: .8rem;
+    }
+}

@@ -12,6 +12,7 @@
 
     margin-top: .5rem;
     width: 35%;
+    padding: -1rem;
 
 }
 
@@ -23,4 +24,27 @@
 
 
 
+}
+
+@media(max-width:750px) {
+    .formLogin {
+        width: 50%;
+
+
+    }
+}
+
+@media(max-width:450px) {
+    .formLogin {
+        width: 65%;
+        font-size: .8rem;
+
+    }
+}
+
+@media(max-width:380px) {
+    .formLogin {
+        width: 75%;
+
+    }
 }

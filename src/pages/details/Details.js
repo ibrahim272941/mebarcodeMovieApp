@@ -31,7 +31,6 @@ const Details = () => {
     <div className="details">
       <div className="trailer-overview">
         <div className="trailer-head">
-          <h4 className="trailer-title">{title}</h4>
           <img
             className="backdrop"
             src={`${IMG_API}${poster_path}`}
@@ -39,21 +38,23 @@ const Details = () => {
           />
         </div>
         <div className="trailer-parag-div">
-          <h4>Overview</h4>
+          <h4 className="trailer-title">{title}</h4>
           <p className="trailer-parag">{overview}</p>
         </div>
       </div>
-      {trailer ? (
-        <iframe
-          src={`${youtubeUrl}${filterTrailer[0]?.key}`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      ) : (
-        <div>Loading......</div>
-      )}
+      <div className="trailer">
+        {trailer ? (
+          <iframe
+            src={`${youtubeUrl}${filterTrailer[0]?.key}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        ) : (
+          <div>Loading......</div>
+        )}
+      </div>
     </div>
   );
 };
