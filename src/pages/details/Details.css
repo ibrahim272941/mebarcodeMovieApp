@@ -17,9 +17,9 @@
 
 .trailer-overview {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: .6rem;
-    height: calc(50% -1rem);
+
 }
 
 .trailer-head {
@@ -80,6 +80,13 @@ iframe {
         box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
         border-radius: 1rem;
     }
+
+    .trailer-parag {
+
+
+        margin-left: .1rem;
+        font-size: .8rem;
+    }
 }
 
 
@@ -89,4 +96,13 @@ iframe {
         width: 80%;
         height: 9rem;
     }
+
+    .trailer-parag {
+
+
+        margin-left: .1rem;
+        font-size: .6rem;
+    }
+
+
 }
