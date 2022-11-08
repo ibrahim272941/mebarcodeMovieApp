@@ -37,10 +37,26 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+    margin: 1rem auto;
+
+
 }
 
 .buttonGroup .button {
-    margin: 0 1rem;
-    width: 7rem;
-    padding: .7rem;
+
+    width: 6rem;
+    font-size: .8rem;
+    background-color: brown;
+    border: none;
+    outline: none;
+    color: antiquewhite;
+}
+
+.buttonGroup p {
+
+    margin: auto .6rem;
+    font-size: .8rem;
+    color: antiquewhite;
+    font-weight: 600;
 }

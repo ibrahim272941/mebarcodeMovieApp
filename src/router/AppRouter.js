@@ -23,7 +23,7 @@ const AppRouter = () => {
   }, []);
   return (
     <Router>
-      <Navbar />
+      <Navbar count={count} />
 
       <Routes>
         <Route path="*" element={<Navigate replace to="/" />} />

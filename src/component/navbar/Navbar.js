@@ -5,7 +5,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { signOut } from 'firebase/auth';
 import { useContext } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ count }) => {
   let path = useLocation().pathname;
   const navigate = useNavigate();
   const { currentUser } = useContext(AuthContext);
@@ -24,19 +24,22 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-      <div className="warning">
-        <p className="info">
-          {path === '/login' && "Don't you have an account "}
-          {path === '/register' && 'Already have an account '}
-          <Link
-            className="link"
-            to={`${path === '/login' ? '/register' : '/login'}`}
-          >
-            {path === '/register' && 'Login'}
-            {path === '/login' && 'Register'}
-          </Link>
-        </p>
-      </div>
+      {count ? null : (
+        <div className="warning">
+          <p className="info">
+            {path === '/login' && "Don't you have an account "}
+            {path === '/register' && 'Already have an account '}
+            <Link
+              className="link"
+              to={`${path === '/login' ? '/register' : '/login'}`}
+            >
+              {path === '/register' && 'Login'}
+              {path === '/login' && 'Register'}
+            </Link>
+          </p>
+        </div>
+      )}
+
       {currentUser ? (
         <div className="logout">
           {currentUser && <h6>{currentUser.displayName}</h6>}

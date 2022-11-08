@@ -42,7 +42,7 @@ const Details = () => {
           <p className="trailer-parag">{overview}</p>
         </div>
       </div>
-      {'?autoplay=1'}
+
       <div className="trailer">
         {trailer ? (
           <iframe
