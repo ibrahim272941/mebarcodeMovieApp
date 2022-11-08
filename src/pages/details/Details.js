@@ -42,13 +42,14 @@ const Details = () => {
           <p className="trailer-parag">{overview}</p>
         </div>
       </div>
+      {'?autoplay=1'}
       <div className="trailer">
         {trailer ? (
           <iframe
             src={`${youtubeUrl}${filterTrailer[0]?.key}`}
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="autoplay"
             allowFullScreen
           ></iframe>
         ) : (
