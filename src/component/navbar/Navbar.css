@@ -1,6 +1,12 @@
 .title {
     text-decoration: none;
     font-size: 3rem;
+
+}
+
+.title h1 {
+    color: #022744;
+    font-weight: 700;
 }
 
 .navbar {
@@ -65,7 +71,8 @@
 }
 
 span {
-    color: red;
+    color: rgb(143, 23, 2);
+    font-weight: 800;
 }
 
 @media(max-width:750px) {

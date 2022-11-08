@@ -1,5 +1,5 @@
 .movieContainer {
-    background-image: linear-gradient(to right, #98dce4, #02343d);
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -10,7 +10,7 @@
     justify-content: space-around;
     align-items: center;
     color: white;
-    background-image: linear-gradient(to right, #98dce4, #02343d);
+
 
 }
 
@@ -21,7 +21,7 @@
 }
 
 .search-form form input {
-    background-image: linear-gradient(to right, #98dce4, #02343d);
+
     width: 100%;
     border: none;
     outline: none;
