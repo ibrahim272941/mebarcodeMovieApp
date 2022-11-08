@@ -3,8 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { auth } from '../../auth/firebase-config';
+import { createUser } from '../../auth/firebase-config';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -15,14 +14,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const displayName = `${name} ${lastName}`;
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      await updateProfile(auth.currentUser, { displayName: displayName });
-      console.log(auth.currentUser);
-      navigate('/');
-    } catch (error) {
-      alert(error.message);
-    }
+    createUser(navigate, email, password, displayName);
   };
   return (
     <div className=" register">

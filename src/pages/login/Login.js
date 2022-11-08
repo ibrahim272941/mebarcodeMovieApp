@@ -2,8 +2,7 @@ import './Login.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../auth/firebase-config';
+import { signInUser } from '../../auth/firebase-config';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -13,12 +12,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate('/');
-    } catch (error) {
-      alert(error.message);
-    }
+    signInUser(email, password, navigate);
   };
   return (
     <div className="login">
