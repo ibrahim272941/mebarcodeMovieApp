@@ -18,10 +18,10 @@ const Navbar = () => {
     <div className="navbar">
       <div className="title">
         <Link style={{ textDecoration: 'none' }} to="/">
-          <h1>
+          <div className="h1">
             Movie <span>DataBase</span>
             {currentUser && <h6>Go To Home Page</h6>}
-          </h1>
+          </div>
         </Link>
       </div>
       <div className="warning">

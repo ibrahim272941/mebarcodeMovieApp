@@ -10,29 +10,31 @@ import Login from '../pages/login/Login';
 import Register from '../pages/register/Register';
 import Details from '../pages/details/Details';
 import AuthRouter from './AuthRouter';
-import Slider from '../component/slider/Slider';
-import { AuthContext } from '../context/AuthContext';
-import { useContext } from 'react';
+import { useEffect, useState } from 'react';
 import PrivateRouter from './PrivateRouter';
 
 const AppRouter = () => {
-  const { currentUser } = useContext(AuthContext);
+  const [count, setCount] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount(false);
+    }, 1000);
+  }, []);
   return (
     <Router>
       <Navbar />
-      {!currentUser ? <Slider /> : null}
 
       <Routes>
         <Route path="*" element={<Navigate replace to="/" />} />
-
-        <Route element={<AuthRouter />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Route>
-        <Route element={<PrivateRouter />}>
+        <Route element={<PrivateRouter count={count} />}>
           <Route path="/" element={<Home />} />
 
           <Route path="/details" element={<Details />} />
+        </Route>
+        <Route element={<AuthRouter count={count} />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
     </Router>
