@@ -24,9 +24,9 @@ const Details = () => {
       console.log(error);
     }
   };
-  console.log(trailer);
+
   const filterTrailer = trailer?.filter((e) => e.type === 'Trailer');
-  console.log(filterTrailer);
+
   return (
     <div className="details">
       <div className="trailer-overview">
