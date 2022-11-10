@@ -18,12 +18,45 @@
 
 .buttonLogin {
 
-    color: rgb(54, 31, 1);
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
 
 
 
+
+}
+
+.buttonLogin .button {
+    background-color: rgb(120, 34, 3);
+    border: none;
+    outline: none;
+    max-width: 30%;
+    padding: .5rem;
+    font-weight: 600;
+
+}
+
+.buttonGoogle {
+    background-color: rgb(120, 34, 3);
+    padding: .5rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: space-around;
+    max-width: 40%;
+
+}
+
+.google-icon {
+
+    margin: auto 0;
+}
+
+.password {
+    cursor: pointer;
 }
 
 @media(max-width:750px) {

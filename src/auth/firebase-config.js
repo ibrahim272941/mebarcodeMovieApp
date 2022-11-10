@@ -2,7 +2,10 @@ import { initializeApp } from 'firebase/app';
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  GoogleAuthProvider,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
+  signInWithPopup,
   updateProfile,
 } from 'firebase/auth';
 
@@ -37,4 +40,18 @@ export const createUser = async (navigate, email, password, displayName) => {
   } catch (error) {
     alert(error.message);
   }
+};
+
+const provider = new GoogleAuthProvider();
+
+export const signInWithGoogle = async () => {
+  try {
+    await signInWithPopup(auth, provider);
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+export const resetPassword = (email) => {
+  sendPasswordResetEmail(auth, email);
 };
