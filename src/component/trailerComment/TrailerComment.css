@@ -11,7 +11,24 @@
 
 }
 
+.tableTrailer {
+    background-color: rgba(2, 63, 93, 0.171);
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: .2rem;
+    width: 90%;
 
+
+
+}
+
+.tableTrailer p {
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    color: antiquewhite;
+}
 
 .buttonGroupEdit {
 

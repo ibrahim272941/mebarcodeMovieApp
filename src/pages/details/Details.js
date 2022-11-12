@@ -5,17 +5,21 @@ import { useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Comment from '../../component/comment/Comment';
 import { AuthContext } from '../../context/AuthContext';
+import TrailerComment from '../../component/trailerComment/TrailerComment';
 const IMG_API = 'https://image.tmdb.org/t/p/original';
 const API_KEY = '0dfeb1e3115d788bdd6ccd6d217d93cf';
 const youtubeUrl = 'https://www.youtube.com/embed/';
+const URL = `https://mebarcode-91813-default-rtdb.europe-west1.firebasedatabase.app`;
 const Details = () => {
   const [trailer, setTrailer] = useState();
+  const [comment, setComment] = useState();
   const { movie } = useContext(AuthContext);
   const { state } = useLocation();
   const { id } = useParams();
   const filterTrailer = trailer?.filter((e) => e.type === 'Trailer');
   const filterMovie = movie?.filter((e) => e.id == id.substring(1));
   const { poster_path, title, overview } = filterMovie[0];
+
   const filmInfo = {
     id,
     poster_path,
@@ -24,6 +28,7 @@ const Details = () => {
 
   useEffect(() => {
     getDetails(id, API_KEY);
+    getComment();
   }, [id]);
   const getDetails = async (id, apiKey) => {
     try {
@@ -39,6 +44,15 @@ const Details = () => {
       console.log(error);
     }
   };
+  const getComment = async () => {
+    const { data } = await axios.get(`${URL}/comment.json`);
+    setComment(data);
+  };
+  const filteredComment = comment
+    ? Object.keys(comment)
+        .map((e) => (comment[e].filmId === id.substring(1) ? comment[e] : null))
+        .filter((e) => e !== null)
+    : null;
 
   return (
     <div className="details">
@@ -69,6 +83,7 @@ const Details = () => {
           <div>Loading......</div>
         )}
       </div>
+      <TrailerComment comment={filteredComment} />
       <Comment state={state} filmInfo={filmInfo} />
     </div>
   );

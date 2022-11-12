@@ -29,7 +29,7 @@ const UserComment = () => {
     navigate(`/details:${id}`, { state: { comment, localId } });
   };
   return (
-    <Table bordered hover>
+    <Table>
       <thead>
         <tr className="commentTable">
           <th>Movie Poster</th>
@@ -52,7 +52,8 @@ const UserComment = () => {
               <td>{comment[item].filmTitle}</td>
               <td>{comment[item].user}</td>
               <td className="commentRow">
-                {comment[item].filmComment}
+                <p>{comment[item].filmComment}</p>
+
                 {comment[item].user === displayName ? (
                   <div className="buttonGroupEdit">
                     <button

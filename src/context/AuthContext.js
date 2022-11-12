@@ -10,7 +10,6 @@ const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?sort_by=popula
 const AuthContexProvider = (prop) => {
   const [currentUser, setUser] = useState();
   const [movie, setMovie] = useState([]);
-
   const [counterC, setCounterContext] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
 
