@@ -13,7 +13,7 @@ const AuthContexProvider = (prop) => {
 
   const [counterC, setCounterContext] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
-  console.log(searchTerm);
+
   useEffect(() => {
     onStateChangedFunc();
     if (searchTerm) {

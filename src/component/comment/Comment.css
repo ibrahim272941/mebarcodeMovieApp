@@ -1,0 +1,27 @@
+.comment {
+    width: 60%;
+    margin: auto;
+}
+
+.submitButton {
+    width: 40%;
+    margin: auto 30%;
+    background-color: brown;
+}
+
+.commandTitle {
+    width: 100%;
+    text-align: center;
+}
+
+.textField {
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: inset 1px 2px 3px rgba(7, 7, 7, 0.9);
+    color: rgb(2, 28, 51);
+    background-color: #d5f8f8;
+    border-radius: 1rem;
+    padding: 1rem;
+
+}

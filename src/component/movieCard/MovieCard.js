@@ -4,14 +4,12 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { Icon } from '@iconify/react';
 const IMG_API = 'https://image.tmdb.org/t/p/original';
-const MovieCard = ({ title, poster_path, overview, vote_average, id }) => {
+const MovieCard = ({ title, poster_path, vote_average, id }) => {
   const { currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleClick = () => {
-    currentUser
-      ? navigate('/details', { state: { id, poster_path, title, overview } })
-      : alert('Plesae Login');
+    currentUser ? navigate(`/details:${id}`) : alert('Plesae Login');
   };
 
   return (

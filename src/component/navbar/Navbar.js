@@ -17,10 +17,14 @@ const Navbar = ({ count }) => {
   return (
     <div className="navbar">
       <div className="title">
-        <Link style={{ textDecoration: 'none' }} to="/">
+        <Link
+          style={{ textDecoration: 'none' }}
+          to={`${path === '/' ? '/comments' : '/'}`}
+        >
           <div className="h1">
             Movie <span>DataBase</span>
-            {currentUser && <h6>Go To Home Page</h6>}
+            {currentUser && path === '/' && <h6>Comment Page</h6>}
+            {currentUser && path === '/comments' && <h6>Home Page</h6>}
           </div>
         </Link>
       </div>

@@ -12,6 +12,7 @@ import Details from '../pages/details/Details';
 import AuthRouter from './AuthRouter';
 import { useEffect, useState } from 'react';
 import PrivateRouter from './PrivateRouter';
+import UserComment from '../pages/userComment/UserComment';
 
 const AppRouter = () => {
   const [count, setCount] = useState(true);
@@ -19,7 +20,7 @@ const AppRouter = () => {
   useEffect(() => {
     setTimeout(() => {
       setCount(false);
-    }, 1000);
+    }, 2000);
   }, []);
   return (
     <Router>
@@ -30,7 +31,8 @@ const AppRouter = () => {
         <Route element={<PrivateRouter count={count} />}>
           <Route path="/" element={<Home />} />
 
-          <Route path="/details" element={<Details />} />
+          <Route path="/details:id" element={<Details />} />
+          <Route path="/comments" element={<UserComment />} />
         </Route>
         <Route element={<AuthRouter count={count} />}>
           <Route path="/login" element={<Login />} />

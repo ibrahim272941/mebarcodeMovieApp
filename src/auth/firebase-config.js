@@ -35,7 +35,7 @@ export const createUser = async (navigate, email, password, displayName) => {
   try {
     await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(auth.currentUser, { displayName: displayName });
-    console.log(auth.currentUser);
+
     navigate('/');
   } catch (error) {
     alert(error.message);

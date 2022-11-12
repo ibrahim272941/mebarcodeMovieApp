@@ -1,0 +1,41 @@
+.commentImg {
+    width: 7rem;
+    margin: auto;
+    height: 7rem;
+}
+
+.commentTable {
+
+    color: antiquewhite;
+
+
+}
+
+
+
+.buttonGroupEdit {
+
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+.edit {
+    width: 40%;
+    font-size: .8rem;
+    background-color: rgb(231, 92, 5);
+    border: none;
+    outline: none;
+    color: antiquewhite;
+}
+
+.delete {
+    width: 40%;
+    font-size: .8rem;
+    background-color: rgb(83, 1, 1);
+    border: none;
+    outline: none;
+    color: antiquewhite;
+}
