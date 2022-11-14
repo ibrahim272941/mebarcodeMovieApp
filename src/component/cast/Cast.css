@@ -1,0 +1,80 @@
+.castingDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    margin: 1rem auto;
+}
+
+.cast {
+
+    width: 6.5rem;
+    margin: .6rem;
+    position: relative;
+    box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
+    overflow: hidden;
+    border-radius: .6rem;
+    background-color: rgba(8, 8, 8, 0.422);
+
+}
+
+.cast img {
+    width: 100%;
+}
+
+.castInfo {
+    max-height: 100%;
+    background-color: rgba(0, 0, 0, 0.37);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: .7rem;
+    color: rgb(247, 215, 173);
+    transform: translateY(100%);
+
+    transition: transform .7s ease-in-out;
+}
+
+.cast:hover .castInfo {
+    transform: translateY(0);
+
+}
+
+@media(max-width:700px) {
+
+    .cast {
+
+        width: 4rem;
+
+
+    }
+}
+
+@media(max-width:600px) {
+    .cast {
+
+        width: 3.4rem;
+
+
+    }
+}
+
+@media(max-width:400px) {
+    .cast {
+
+        width: 4.2rem;
+
+
+    }
+
+    .castingDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+
+        margin: auto;
+    }
+}

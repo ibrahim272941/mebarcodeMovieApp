@@ -1,9 +1,12 @@
 .details {
-    height: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    color: rgb(248, 244, 242);
+
+    font-weight: 600;
+
 
 
 }
@@ -15,40 +18,43 @@
     border-radius: 1rem;
 }
 
-.trailer-overview {
-    display: flex;
-    justify-content: space-evenly;
-    padding: .6rem;
+.trailer-head .castTitle {
+    font-size: 2rem;
+    color: rgb(248, 242, 240);
+    font-weight: 700;
+    text-align: center;
 
 }
 
 .trailer-head {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.39);
 
 
-
+    margin: 1rem auto;
 }
 
 
 .trailer-parag-div {
+
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
 
-    margin-left: .3rem;
+    color: rgb(248, 242, 240);
+
     font-size: 1rem;
+
+
+    font-weight: 600;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.42);
 
 }
 
 .trailer-parag {
+    font-size: 1rem;
 
-
-    margin: 0 .3rem 3rem .3rem;
-    font-size: 1.3rem;
 }
 
 
@@ -56,8 +62,17 @@
 
     width: 100%;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.42);
+    padding: 1rem;
 
 
+
+}
+
+.trailerTitle {
+    font-size: 2rem;
+    color: rgb(248, 242, 240);
+    font-weight: 700;
 
 }
 
@@ -66,7 +81,9 @@ iframe {
     height: 17rem;
 }
 
-@media(max-width:650px) {
+
+
+@media(max-width:700px) {
     iframe {
         width: 70%;
         height: 13rem;
@@ -90,7 +107,7 @@ iframe {
     }
 }
 
-@media(max-width:500px) {
+@media(max-width:550px) {
     .details {
         height: 100%;
         display: flex;
@@ -102,8 +119,8 @@ iframe {
     }
 
     iframe {
-        width: 75%;
-        height: 11rem;
+        width: 90%;
+        height: 13rem;
     }
 
     .backdrop {
@@ -135,8 +152,8 @@ iframe {
     }
 
     iframe {
-        width: 80%;
-        height: 9rem;
+        width: 90%;
+        height: 12rem;
         margin-top: 3rem;
 
     }

@@ -59,7 +59,7 @@ const Comment = ({ filmInfo, state }) => {
             onChange={(e) => setComment(e.target.value)}
             className="textField"
             as="textarea"
-            rows={5}
+            rows={3}
           />
         </Form.Group>
 

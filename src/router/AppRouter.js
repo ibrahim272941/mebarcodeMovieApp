@@ -25,15 +25,14 @@ const AppRouter = () => {
   return (
     <Router>
       <Navbar count={count} />
-
       <Routes>
         <Route path="*" element={<Navigate replace to="/" />} />
         <Route element={<PrivateRouter count={count} />}>
-          <Route path="/" element={<Home />} />
-
           <Route path="/details:id" element={<Details />} />
           <Route path="/comments" element={<UserComment />} />
+          <Route path="/" element={<Home />} />
         </Route>
+
         <Route element={<AuthRouter count={count} />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

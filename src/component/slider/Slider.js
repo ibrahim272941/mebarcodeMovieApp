@@ -35,7 +35,7 @@ const Slider = ({ movie }) => {
       : alert('Please Login');
   };
   return (
-    <Carousel className="carousel" fade autoPlay={true} interval={2000}>
+    <Carousel className="carousel mt-4" fade autoPlay={true} interval={2000}>
       {movies?.map((img, i) => (
         <Carousel.Item className="d-flex justify-content-center slider" key={i}>
           <img
