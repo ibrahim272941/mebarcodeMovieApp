@@ -14,7 +14,7 @@
 .backdrop {
     width: 7rem;
     height: 10rem;
-    box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
+    /* box-shadow: 2px -2px 2px rgba(231, 229, 229, 0.568); */
     border-radius: 1rem;
 }
 
@@ -67,6 +67,7 @@
 
 
 
+
 }
 
 .trailerTitle {
@@ -78,7 +79,8 @@
 
 iframe {
     width: 60%;
-    height: 17rem;
+    height: 20rem;
+    box-shadow: 2px 3px 2px rgba(231, 229, 229, 0.568);
 }
 
 

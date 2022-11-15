@@ -3,6 +3,7 @@ import MovieCard from '../../component/movieCard/MovieCard';
 import { useContext } from 'react';
 import { Button } from 'react-bootstrap';
 import { AuthContext } from '../../context/AuthContext';
+import Slider from '../../component/slider/Slider';
 
 const Home = () => {
   const { movie, setCounterContext, counterC, searchTerm, setSearchTerm } =
@@ -26,6 +27,7 @@ const Home = () => {
 
   return (
     <>
+      <Slider />
       <div className="search-form">
         <form onSubmit={handleSubmit} action="">
           <input type="text" placeholder="Search a Film" />

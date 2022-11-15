@@ -66,6 +66,20 @@ const Details = () => {
         backgroundPosition: 'center',
       }}
     >
+      <div className="trailer">
+        <p className="trailerTitle">Official Trailer</p>
+        {trailer ? (
+          <iframe
+            src={`${youtubeUrl}${filterTrailer[0]?.key}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="autoplay"
+            allowFullScreen
+          ></iframe>
+        ) : (
+          <div>Loading......</div>
+        )}
+      </div>
       <div className="trailer-overview">
         <div className="trailer-parag-div">
           <h3 className="trailer-title">{title}</h3>
@@ -80,20 +94,6 @@ const Details = () => {
           /> */}
         <p className="castTitle">Casting</p>
         <Cast id={id} />
-      </div>
-      <div className="trailer">
-        <p className="trailerTitle">Official Trailer</p>
-        {trailer ? (
-          <iframe
-            src={`${youtubeUrl}${filterTrailer[0]?.key}`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="autoplay"
-            allowFullScreen
-          ></iframe>
-        ) : (
-          <div>Loading......</div>
-        )}
       </div>
 
       {/* <TrailerComment comment={filteredComment} /> */}

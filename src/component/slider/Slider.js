@@ -29,7 +29,7 @@ const Slider = ({ movie }) => {
   const handleClick = (img) => {
     const { id, poster_path, title, overview } = img;
     currentUser
-      ? navigate('/details', {
+      ? navigate(`details:${id}`, {
           state: { id, poster_path, title, overview },
         })
       : alert('Please Login');
@@ -39,7 +39,7 @@ const Slider = ({ movie }) => {
       {movies?.map((img, i) => (
         <Carousel.Item className="d-flex justify-content-center slider" key={i}>
           <img
-            onClick={(e) => handleClick(img)}
+            onClick={() => handleClick(img)}
             style={{}}
             src={IMG_API + img.backdrop_path}
             alt="First slide"

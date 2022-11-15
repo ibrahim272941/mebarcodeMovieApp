@@ -4,7 +4,6 @@ import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { createUser } from '../../auth/firebase-config';
-import Slider from '../../component/slider/Slider';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -19,8 +18,6 @@ const Register = () => {
   };
   return (
     <>
-      <Slider />
-
       <div className=" register">
         <Form className="form" onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
