@@ -3,13 +3,19 @@ import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { Icon } from '@iconify/react';
+import ModalLogin from '../modalLogin/ModalLogin';
 const IMG_API = 'https://image.tmdb.org/t/p/original';
 const MovieCard = ({ title, poster_path, vote_average, id }) => {
   const { currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleClick = () => {
-    currentUser ? navigate(`/details:${id}`) : alert('Plesae Login');
+    navigate(`/details:${id}`);
+    // if (currentUser) {
+    // } else {
+    //   alert('Plesae Login');
+    //   navigate(`/login`);
+    // }
   };
 
   return (
@@ -26,7 +32,11 @@ const MovieCard = ({ title, poster_path, vote_average, id }) => {
           />
           <span>{vote_average}</span>
         </div>
-        <h4 onClick={handleClick}>More Info</h4>
+        {currentUser ? (
+          <h4 onClick={handleClick}>More Info</h4>
+        ) : (
+          <ModalLogin currentUser={currentUser} id={id} />
+        )}
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const Navbar = ({ count }) => {
               </div>
             </Link>
           </div>
-          {count ? null : (
+          {/* {count ? null : (
             <div className="warning">
               <p className="info">
                 {path === '/login' && "Don't you have an account "}
@@ -44,7 +44,7 @@ const Navbar = ({ count }) => {
                 </Link>
               </p>
             </div>
-          )}
+          )} */}
 
           {currentUser ? (
             <div className="logout">
@@ -63,14 +63,3 @@ const Navbar = ({ count }) => {
 };
 
 export default Navbar;
-
-{
-  /* {currentUser && (
-        <Link style={{ textDecoration: 'none' }} to="/">
-          <h2>
-            Movie <span>DataBase</span>
-            <h6>Go To Home Page</h6>
-          </h2>
-        </Link>
-      )} */
-}

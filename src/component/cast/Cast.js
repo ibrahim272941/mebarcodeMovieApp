@@ -21,7 +21,7 @@ const Cast = ({ id }) => {
 
     setCast(cast.slice(0, 7));
   };
-  console.log(cast);
+
   return (
     <div className="castingDiv">
       {cast?.map((item, i) => (

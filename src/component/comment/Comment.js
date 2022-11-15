@@ -1,19 +1,20 @@
-import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
+import { editComment, postComment } from '../../crud/Crud';
 import './Comment.css';
 
 const Comment = ({ filmInfo, state }) => {
   const { currentUser } = useContext(AuthContext);
   const [comment, setComment] = useState();
+
   const navigate = useNavigate();
   useEffect(() => {
     if (state) {
       setComment(state.comment);
     }
-  }, []);
+  }, [state]);
 
   const filmComment = {
     user: currentUser.displayName,
@@ -22,28 +23,14 @@ const Comment = ({ filmInfo, state }) => {
     filmComment: comment,
     filmId: filmInfo.id.substring(1),
   };
-
-  const URL = `https://mebarcode-91813-default-rtdb.europe-west1.firebasedatabase.app`;
   const handleSubmit = async () => {
     if (!state) {
-      try {
-        await axios.post(`${URL}/comment.json`, {
-          ...filmComment,
-        });
-        navigate('/comments');
-      } catch (error) {
-        console.log(error);
-      }
+      postComment(filmComment);
       setComment('');
+      navigate('/comments');
     } else {
-      try {
-        await axios.put(`${URL}/comment/${state.localId}.json`, {
-          ...filmComment,
-        });
-        navigate('/comments');
-      } catch (error) {
-        console.log(error);
-      }
+      editComment(filmComment, state);
+      navigate('/comments');
     }
   };
 

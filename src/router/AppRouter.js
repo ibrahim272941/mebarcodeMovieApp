@@ -27,14 +27,14 @@ const AppRouter = () => {
       <Navbar count={count} />
       <Routes>
         <Route path="*" element={<Navigate replace to="/" />} />
+        <Route path="/" element={<Home />} />
         <Route element={<PrivateRouter count={count} />}>
           <Route path="/details:id" element={<Details />} />
           <Route path="/comments" element={<UserComment />} />
-          <Route path="/" element={<Home />} />
         </Route>
 
         <Route element={<AuthRouter count={count} />}>
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
