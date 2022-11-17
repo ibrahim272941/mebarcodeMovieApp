@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { Button } from 'react-bootstrap';
 import { AuthContext } from '../../context/AuthContext';
 import Slider from '../../component/slider/Slider';
+import SwiperComponent from '../../component/swiper/Swiper';
 
 const Home = () => {
   const { movie, setCounterContext, counterC, searchTerm, setSearchTerm } =
@@ -48,12 +49,14 @@ const Home = () => {
           </Button>
         </div>
       )}
+      <SwiperComponent />
 
-      <div className="movieContainer">
+      {/* <div className="movieContainer">
         {movie?.map((item, i) => (
-          <MovieCard key={i} {...item} />
+          // <MovieCard key={i} {...item} />
+          //<SwiperComponent key={i} {...item} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

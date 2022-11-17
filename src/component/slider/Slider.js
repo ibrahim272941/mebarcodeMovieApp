@@ -35,18 +35,31 @@ const Slider = ({ movie }) => {
       : alert('Please Login');
   };
   return (
-    <Carousel className="carousel mt-4" fade autoPlay={true} interval={2000}>
+    <Carousel
+      className="carousel mt-4 corusselContainer"
+      fade
+      autoPlay={true}
+      interval={5000}
+    >
       {movies?.map((img, i) => (
         <Carousel.Item className="d-flex justify-content-center slider" key={i}>
-          <img
+          {/* <img
             onClick={() => handleClick(img)}
             style={{}}
             src={IMG_API + img.backdrop_path}
             alt="First slide"
-          />
-          <Carousel.Caption>
+          /> */}
+          <div
+            style={{
+              backgroundImage: `url(${IMG_API + img.backdrop_path})`,
+              backgroundSize: 'cover',
+            }}
+            className="divImage"
+          >
             <p className="filmTitle">{img.title}</p>
-          </Carousel.Caption>
+            <p className="filmOverview">{img.overview}</p>
+          </div>
+          <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
       ))}
     </Carousel>

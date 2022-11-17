@@ -1,17 +1,45 @@
+.corusselContainer {
+    width: 100%;
+}
+
 .slider img {
-    height: 20rem;
+    height: 30rem;
     border-radius: 1.2rem;
-    width: 70%;
+    width: 100%;
     align-items: center;
 
 }
 
+.divImage {
+    height: 30rem;
+
+    width: 100%;
+    align-items: center;
+    opacity: .8;
+
+}
+
+
+
 .filmTitle {
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: antiquewhite;
     font-weight: 700;
     letter-spacing: .1rem;
     text-shadow: 1px 1px #9f9d9d;
+    opacity: 1;
+
+}
+
+.filmOverview {
+    font-size: 1rem;
+    color: antiquewhite;
+    font-weight: 500;
+
+
+    width: 50%;
+
+
 
 }
 
