@@ -1,11 +1,12 @@
 .movie {
-    width: 14rem;
+    width: 11rem;
     margin: 1rem .7rem;
     position: relative;
     overflow: hidden;
     box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
-    background-color: #01788d;
+    /* background-color: #01788d; */
     border-radius: 1rem;
+
 }
 
 .movie-info {
@@ -33,7 +34,7 @@
     background-color: rgba(8, 8, 8, 0.4);
     transform: translateY(100%);
     color: white;
-    padding: 1rem;
+
 
     overflow: hidden;
     max-height: 100%;
@@ -72,4 +73,42 @@
     transition: all .4s ease-in-out;
     font-size: 1.5rem;
     padding: .6rem;
+}
+
+@media(max-width:750px) {
+    .movie {
+        width: 9rem;
+
+        border-radius: .5rem;
+    }
+}
+
+@media(max-width:550px) {
+    .movie {
+        width: 8rem;
+
+
+    }
+
+    .overview h4 {
+
+
+
+        font-size: 1rem;
+
+
+
+    }
+
+    .movie .overview .movie-info h6 {
+        font-size: .3rem;
+    }
+}
+
+@media(max-width:400px) {
+    .movie {
+        width: 7rem;
+
+
+    }
 }

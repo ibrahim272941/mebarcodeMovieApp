@@ -82,8 +82,11 @@ const Details = () => {
       </div>
       <div className="trailer-overview">
         <div className="trailer-parag-div">
-          <h3 className="trailer-title">{title}</h3>
-          <p className="trailer-parag">{overview}</p>
+          <div className="overviewDiv">
+            <h3 className="trailer-title">{title}</h3>
+            <p className="trailer-parag">{overview}</p>
+          </div>
+          <Cast id={id} />
         </div>
       </div>
       <div className="trailer-head">
@@ -92,8 +95,6 @@ const Details = () => {
             src={`${IMG_API}${poster_path}`}
             alt="img"
           /> */}
-        <p className="castTitle">Casting</p>
-        <Cast id={id} />
       </div>
 
       {/* <TrailerComment comment={filteredComment} /> */}

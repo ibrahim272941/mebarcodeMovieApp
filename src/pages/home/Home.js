@@ -28,12 +28,6 @@ const Home = () => {
 
   return (
     <>
-      <Slider />
-      <div className="search-form">
-        <form onSubmit={handleSubmit} action="">
-          <input type="text" placeholder="Search a Film" />
-        </form>
-      </div>
       {searchTerm ? (
         <Button onClick={handleBack} className="backToHome">
           Back to home Page
@@ -49,6 +43,13 @@ const Home = () => {
           </Button>
         </div>
       )}
+      <div className="search-form">
+        <form onSubmit={handleSubmit} action="">
+          <input type="text" placeholder="Search a Film" />
+        </form>
+      </div>
+
+      <Slider />
       <SwiperComponent />
 
       {/* <div className="movieContainer">

@@ -26,50 +26,50 @@ const SwiperComponent = () => {
   return (
     <div className="mainSwiper">
       <Swiper
-        effect={'flip'}
+        // effect={'cube'}
         autoplay={{
-          delay: 3500,
+          delay: 1500,
           disableOnInteraction: false,
         }}
         grabCursor={true}
-        centeredSlides={true}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }}
+        // centeredSlides={false}
+        // coverflowEffect={{
+        //   rotate: 0,
+        //   stretch: 0,
+        //   depth: 1,
+        //   modifier: 2,
+        //   slideShadows: true,
+        // }}
         pagination={true}
+        loop={true}
         className="mySwiper"
         navigation
-        slidesPerView={2}
+        slidesPerView={8}
         spaceBetween={0}
       >
         {movie?.map((item, i) => (
           <SwiperSlide className="sliderItem" key={i}>
-            <div className="sliderBox">
-              <div className="movie">
-                <img src={`${IMG_API}${item.poster_path}`} alt="img" />
-                <div className="overview">
-                  <div className="movie-info">
-                    <h5>{item.title}</h5>
-                    <Icon
-                      className="imdb-icon"
-                      icon="cib:imdb"
-                      color="#f5c518"
-                      width="30"
-                    />
-                    <span>{item.vote_average}</span>
-                  </div>
-                  {currentUser ? (
-                    <h4 onClick={() => handleClick(item.id)}>More Info</h4>
-                  ) : (
-                    <ModalLogin currentUser={currentUser} id={item.id} />
-                  )}
+            <div className="movie">
+              <img src={`${IMG_API}${item.poster_path}`} alt="img" />
+              <div className="overview">
+                <div className="movie-info">
+                  <h5>{item.title}</h5>
+                  <Icon
+                    className="imdb-icon"
+                    icon="cib:imdb"
+                    color="#f5c518"
+                    width="30"
+                  />
+                  <span>{item.vote_average}</span>
                 </div>
+                {currentUser ? (
+                  <h4 onClick={() => handleClick(item.id)}>More Info</h4>
+                ) : (
+                  <ModalLogin currentUser={currentUser} id={item.id} />
+                )}
               </div>
             </div>
+
             {/* <img src={`${IMG_API}${item.poster_path}`} alt="img" /> */}
           </SwiperSlide>
         ))}

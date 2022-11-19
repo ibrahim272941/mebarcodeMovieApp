@@ -1,19 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.mainSwiper {
-    margin: 40px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .sliderItem {
-    display: flex;
-    justify-content: space-evenly;
+
+    margin-left: 3rem;
+
+
+
 
 
 
@@ -21,4 +11,45 @@
 
 }
 
-.mySwiper {}
+.mySwiper {
+    width: 97%;
+
+}
+
+@media(max-width:1050px) {
+    .sliderItem {
+
+        margin-left: 6rem;
+
+
+
+
+
+    }
+}
+
+
+
+@media(max-width:600px) {
+    .sliderItem {
+
+        margin-left: 8rem;
+
+
+
+
+
+    }
+}
+
+@media(max-width:380px) {
+    .sliderItem {
+
+        margin-left: 7rem;
+
+
+
+
+
+    }
+}

@@ -18,8 +18,8 @@
     border-radius: 1rem;
 }
 
-.trailer-head .castTitle {
-    font-size: 2rem;
+.castTitle {
+    font-size: 1.5rem;
     color: rgb(248, 242, 240);
     font-weight: 700;
     text-align: center;
@@ -38,7 +38,7 @@
 .trailer-parag-div {
 
     display: flex;
-    flex-direction: column;
+
     text-align: center;
 
     color: rgb(248, 242, 240);
@@ -50,6 +50,15 @@
     height: fit-content;
     background-color: rgba(0, 0, 0, 0.42);
 
+}
+
+.castingDiv {
+    display: flex;
+
+}
+
+.overviewDiv {
+    width: 55%;
 }
 
 .trailer-parag {

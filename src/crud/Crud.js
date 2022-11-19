@@ -25,16 +25,16 @@ export const deleteComment = async (id) => {
   console.log(id);
   try {
     await axios.delete(`${URL}/comment/${id}.json`);
+    getComment();
   } catch (error) {
     console.log(error);
   }
-  getComment();
 };
 
 export const getComment = async (setComment) => {
   try {
     const { data } = await axios.get(`${URL}/comment.json`);
-    console.log(data);
+
     setComment(data);
   } catch (error) {
     console.log(error);

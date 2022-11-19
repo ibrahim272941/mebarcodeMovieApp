@@ -23,7 +23,7 @@ const MovieCard = ({ title, poster_path, vote_average, id }) => {
       <img src={`${IMG_API}${poster_path}`} alt="img" />
       <div className="overview">
         <div className="movie-info">
-          <h5>{title}</h5>
+          <h6>{title}</h6>
           <Icon
             className="imdb-icon"
             icon="cib:imdb"
