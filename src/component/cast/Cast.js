@@ -9,7 +9,6 @@ const Cast = ({ id }) => {
   useEffect(() => {
     getReviews();
   }, [id]);
-
   const getReviews = async () => {
     const {
       data: { cast },
@@ -22,15 +21,26 @@ const Cast = ({ id }) => {
     setCast(cast.slice(0, 7));
   };
 
+  const handlePerson = async (personId) => {
+    console.log(personId);
+    let urls = [
+      `https://api.themoviedb.org/3/person/${personId}?api_key=${API_KEY}`,
+      `https://api.themoviedb.org/3/person/${personId}/movie_credits?api_key=${API_KEY}`,
+    ];
+    const data = urls.map((url) => axios.get(url));
+    axios.all(data).then((res) => console.log(res[0].data));
+  };
   return (
     <>
       {/* <p className="castinTitle">Casting</p> */}
       <div className="castingDiv">
         {cast?.map((item, i) => (
-          <div key={i} className="cast">
+          <div key={item.id} className="cast">
             <img src={`${IMG_API}${item.profile_path}`} alt="" />
             <div className="castInfo">
-              <p className="name">{item.name}</p>
+              <p onClick={() => handlePerson(item.id)} className="name">
+                {item.name}
+              </p>
             </div>
           </div>
         ))}

@@ -20,6 +20,7 @@ const Details = () => {
   const { id } = useParams();
   const filterTrailer = trailer?.filter((e) => e.type === 'Trailer');
   const filterMovie = movie?.filter((e) => e.id == id.substring(1));
+  console.log(filterMovie);
   const { poster_path, title, overview, backdrop_path } = filterMovie[0];
 
   const filmInfo = {

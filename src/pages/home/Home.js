@@ -49,15 +49,18 @@ const Home = () => {
         </form>
       </div>
 
-      <Slider />
-      <SwiperComponent />
-
-      {/* <div className="movieContainer">
-        {movie?.map((item, i) => (
-          // <MovieCard key={i} {...item} />
-          //<SwiperComponent key={i} {...item} />
-        ))}
-      </div> */}
+      {searchTerm ? (
+        <div className="movieContainer">
+          {movie?.map((item, i) => (
+            <MovieCard key={i} {...item} />
+          ))}
+        </div>
+      ) : (
+        <div>
+          <Slider />
+          <SwiperComponent />
+        </div>
+      )}
     </>
   );
 };

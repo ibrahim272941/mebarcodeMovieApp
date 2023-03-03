@@ -26,13 +26,13 @@ const SwiperComponent = () => {
   return (
     <div className="mainSwiper">
       <Swiper
-        // effect={'cube'}
+        //effect={'cube'}
         autoplay={{
-          delay: 1500,
+          delay: 4200,
           disableOnInteraction: false,
         }}
         grabCursor={true}
-        // centeredSlides={false}
+        centeredSlides={false}
         // coverflowEffect={{
         //   rotate: 0,
         //   stretch: 0,
