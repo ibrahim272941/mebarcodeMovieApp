@@ -15,7 +15,7 @@ const ModalLogin = ({ currentUser, id }) => {
   const handleSubmit = () => {
     if (!currentUser) {
       signInUser(email, password, navigate);
-      navigate(`/details:${id}`);
+      //navigate(`/details:${id}`);
     } else if (currentUser) {
       navigate(`/details:${id}`);
     }

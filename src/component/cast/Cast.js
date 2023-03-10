@@ -28,7 +28,7 @@ const Cast = ({ id }) => {
       `https://api.themoviedb.org/3/person/${personId}/movie_credits?api_key=${API_KEY}`,
     ];
     const data = urls.map((url) => axios.get(url));
-    axios.all(data).then((res) => console.log(res[0].data));
+    axios.all(data).then((res) => console.log(res[1].data));
   };
   return (
     <>

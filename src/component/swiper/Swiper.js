@@ -16,6 +16,7 @@ const SwiperComponent = () => {
 
   const handleClick = (id) => {
     navigate(`/details:${id}`);
+    console.log(id);
     // if (currentUser) {
     // } else {
     //   alert('Plesae Login');
@@ -44,12 +45,12 @@ const SwiperComponent = () => {
         loop={true}
         className="mySwiper"
         navigation
-        slidesPerView={8}
+        slidesPerView={6}
         spaceBetween={0}
       >
         {movie?.map((item, i) => (
           <SwiperSlide className="sliderItem" key={i}>
-            <div className="movie">
+            <div className="movie movieSwipper">
               <img src={`${IMG_API}${item.poster_path}`} alt="img" />
               <div className="overview">
                 <div className="movie-info">

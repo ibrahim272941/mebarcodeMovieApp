@@ -28,13 +28,14 @@
 }
 
 .modalButton {
-    background-color: rgb(161, 4, 4);
+    background-color: rgb(120, 34, 3);
     color: white;
     border: none;
     outline: none;
 
-    font-size: 1.4rem;
-    padding: .6rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: .7rem;
     cursor: pointer;
     border-radius: .5rem;
     box-shadow: 5px 3px 5px rgba(22, 22, 22, 0.568);

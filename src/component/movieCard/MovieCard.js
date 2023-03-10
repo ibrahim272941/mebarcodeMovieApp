@@ -17,7 +17,7 @@ const MovieCard = ({ title, poster_path, vote_average, id }) => {
     //   navigate(`/login`);
     // }
   };
-
+  console.log(Boolean(currentUser));
   return (
     <div className="movie">
       <img src={`${IMG_API}${poster_path}`} alt="img" />

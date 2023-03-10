@@ -9,10 +9,18 @@
 
 
 
+
+
+
 }
 
 .mySwiper {
-    width: 97%;
+    width: 100%;
+
+}
+
+.movieSwipper {
+    width: 13rem;
 
 }
 
