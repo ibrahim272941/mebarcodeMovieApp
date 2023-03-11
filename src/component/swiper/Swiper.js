@@ -12,35 +12,25 @@ const IMG_API = 'https://image.tmdb.org/t/p/original';
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 const SwiperComponent = () => {
   const { currentUser, movie } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const handleClick = (id) => {
     navigate(`/details:${id}`);
-    console.log(id);
-    // if (currentUser) {
-    // } else {
-    //   alert('Plesae Login');
-    //   navigate(`/login`);
-    // }
   };
 
   return (
     <div className="mainSwiper">
       <Swiper
-        //effect={'cube'}
+        //ref={swiperRef}
         autoplay={{
-          delay: 4200,
+          delay: 3000,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
+        onAutoplayStop
         grabCursor={true}
         centeredSlides={false}
-        // coverflowEffect={{
-        //   rotate: 0,
-        //   stretch: 0,
-        //   depth: 1,
-        //   modifier: 2,
-        //   slideShadows: true,
-        // }}
         pagination={true}
         loop={true}
         className="mySwiper"

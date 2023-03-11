@@ -1,6 +1,6 @@
 .sliderItem {
 
-    margin-left: 3rem;
+    margin-left: 1rem;
 
 
 
@@ -20,11 +20,12 @@
 }
 
 .movieSwipper {
-    width: 13rem;
+    width: 14rem;
+
 
 }
 
-@media(max-width:1050px) {
+@media(max-width:1150px) {
     .sliderItem {
 
         margin-left: 6rem;
@@ -38,7 +39,25 @@
 
 
 
-@media(max-width:600px) {
+@media(max-width:850px) {
+    .sliderItem {
+
+        margin-left: 7rem;
+
+
+
+
+
+    }
+
+    .movieSwipper {
+        width: 12rem;
+
+
+    }
+}
+
+@media(max-width:650px) {
     .sliderItem {
 
         margin-left: 8rem;
@@ -48,16 +67,32 @@
 
 
     }
+
+    .movieSwipper {
+        width: 11rem;
+
+
+    }
 }
 
-@media(max-width:380px) {
+@media(max-width:410px) {
     .sliderItem {
 
-        margin-left: 7rem;
+        margin-left: 6rem;
 
 
 
 
 
+    }
+
+    .movieSwipper {
+        width: 9rem;
+
+
+    }
+
+    h5 {
+        font-size: 1rem;
     }
 }
