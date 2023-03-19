@@ -12,6 +12,7 @@ const AuthContexProvider = (prop) => {
   const [movie, setMovie] = useState([]);
   const [counterC, setCounterContext] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
+  const [itemId, setItemId] = useState();
 
   useEffect(() => {
     onStateChangedFunc();
@@ -20,7 +21,7 @@ const AuthContexProvider = (prop) => {
     } else {
       getMovie(FEATURED_API + counterC);
     }
-  }, [counterC, searchTerm]);
+  }, [counterC, searchTerm, itemId]);
   const onStateChangedFunc = async () => {
     try {
       onAuthStateChanged(auth, (validUser) => {
@@ -51,6 +52,7 @@ const AuthContexProvider = (prop) => {
         counterC,
         setSearchTerm,
         searchTerm,
+        setItemId,
       }}
     >
       {prop.children}

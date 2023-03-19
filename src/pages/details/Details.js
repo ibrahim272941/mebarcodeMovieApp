@@ -15,7 +15,7 @@ const Details = () => {
   const [trailer, setTrailer] = useState();
   const [comment, setComment] = useState();
 
-  const { movie } = useContext(AuthContext);
+  const { movie, setItemId } = useContext(AuthContext);
   const { state } = useLocation();
   const { id } = useParams();
   const filterTrailer = trailer?.filter((e) => e.type === 'Trailer');
@@ -32,7 +32,8 @@ const Details = () => {
   useEffect(() => {
     getDetails(id, API_KEY);
     // getComment();
-  }, [id]);
+    setItemId(id);
+  }, [id, setItemId]);
 
   const getDetails = async (id, apiKey) => {
     try {
