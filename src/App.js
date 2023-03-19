@@ -1,11 +1,17 @@
 import './App.css';
 import AppRouter from './router/AppRouter';
 import AuthContexProvider from './context/AuthContext';
+import MovieContextProvider from './context/MovieContext';
+import CastContextProvider from './context/CastContext';
 
 function App() {
   return (
     <AuthContexProvider>
-      <AppRouter />
+      <MovieContextProvider>
+        <CastContextProvider>
+          <AppRouter />
+        </CastContextProvider>
+      </MovieContextProvider>
     </AuthContexProvider>
   );
 }

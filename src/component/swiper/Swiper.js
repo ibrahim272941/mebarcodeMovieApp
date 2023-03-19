@@ -6,12 +6,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import { AuthContext } from '../../context/AuthContext';
+import { MovieContext } from '../../context/MovieContext';
 import ModalLogin from '../modalLogin/ModalLogin';
 import './Swiper.css';
 const IMG_API = 'https://image.tmdb.org/t/p/original';
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 const SwiperComponent = () => {
-  const { currentUser, movie } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
+  const { movie } = useContext(MovieContext);
 
   const navigate = useNavigate();
 

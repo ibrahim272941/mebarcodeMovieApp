@@ -1,33 +1,18 @@
 import './Slider.css';
-import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import { AuthContext } from '../../context/AuthContext';
 import { useContext } from 'react';
-import axios from 'axios';
-import Cast from '../cast/Cast';
+
+import { MovieContext } from '../../context/MovieContext';
 const IMG_API = 'https://image.tmdb.org/t/p/original';
-const API_KEY = '0dfeb1e3115d788bdd6ccd6d217d93cf';
-const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1`;
+
 const Slider = () => {
-  const { currentUser, movie } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
+  const { movie } = useContext(MovieContext);
 
   let navigate = useNavigate();
-  const [movies, setMovie] = useState();
-  useEffect(() => {
-    getMovie(FEATURED_API);
-  }, []);
-  const getMovie = async (api) => {
-    try {
-      const {
-        data: { results },
-      } = await axios.get(api);
 
-      setMovie(results);
-    } catch (error) {
-      console.log(error);
-    }
-  };
   const handleClick = (img) => {
     const { id, poster_path, title, overview } = img;
     currentUser

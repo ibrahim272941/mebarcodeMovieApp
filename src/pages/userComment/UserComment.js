@@ -94,7 +94,7 @@ const UserComment = () => {
                             className="edit"
                           >
                             {/* <Link to={`/details:${comment[item].filmId}`}>Edit</Link> */}
-                            <Icon icon="wpf:edit" width="40%" />
+                            <Icon icon="wpf:edit" width="50%" />
                           </button>
                           <button
                             onClick={() => handleDelete(item)}

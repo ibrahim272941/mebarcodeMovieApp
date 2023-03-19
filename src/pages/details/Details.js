@@ -7,20 +7,21 @@ import Comment from '../../component/comment/Comment';
 import { AuthContext } from '../../context/AuthContext';
 import TrailerComment from '../../component/trailerComment/TrailerComment';
 import Cast from '../../component/cast/Cast';
+import { MovieContext } from '../../context/MovieContext';
 const IMG_API = 'https://image.tmdb.org/t/p/original';
 const API_KEY = '0dfeb1e3115d788bdd6ccd6d217d93cf';
 const youtubeUrl = 'https://www.youtube.com/embed/';
 const URL = `https://mebarcode-91813-default-rtdb.europe-west1.firebasedatabase.app`;
 const Details = () => {
   const [trailer, setTrailer] = useState();
-  const [comment, setComment] = useState();
 
-  const { movie, setItemId } = useContext(AuthContext);
+  const { movie, setItemId } = useContext(MovieContext);
+
   const { state } = useLocation();
   const { id } = useParams();
   const filterTrailer = trailer?.filter((e) => e.type === 'Trailer');
   const filterMovie = movie?.filter((e) => e.id == id.substring(1));
-  console.log(filterMovie);
+
   const { poster_path, title, overview, backdrop_path } = filterMovie[0];
 
   const filmInfo = {

@@ -2,13 +2,13 @@ import './Home.css';
 import MovieCard from '../../component/movieCard/MovieCard';
 import { useContext } from 'react';
 import { Button } from 'react-bootstrap';
-import { AuthContext } from '../../context/AuthContext';
 import Slider from '../../component/slider/Slider';
 import SwiperComponent from '../../component/swiper/Swiper';
+import { MovieContext } from '../../context/MovieContext';
 
 const Home = () => {
   const { movie, setCounterContext, counterC, searchTerm, setSearchTerm } =
-    useContext(AuthContext);
+    useContext(MovieContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,7 +56,7 @@ const Home = () => {
           ))}
         </div>
       ) : (
-        <div>
+        <div className="sliderGroup">
           <Slider />
           <SwiperComponent />
         </div>

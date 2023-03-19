@@ -13,6 +13,7 @@ import AuthRouter from './AuthRouter';
 import { useEffect, useState } from 'react';
 import PrivateRouter from './PrivateRouter';
 import UserComment from '../pages/userComment/UserComment';
+import { CastDetails } from '../pages/CastDetails/CastDetails';
 
 const AppRouter = () => {
   const [count, setCount] = useState(true);
@@ -31,6 +32,7 @@ const AppRouter = () => {
         <Route element={<PrivateRouter count={count} />}>
           <Route path="/details:id" element={<Details />} />
           <Route path="/comments" element={<UserComment />} />
+          <Route path="/castdetails" element={<CastDetails />} />
         </Route>
 
         <Route element={<AuthRouter count={count} />}>
