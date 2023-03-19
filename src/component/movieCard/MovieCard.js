@@ -11,11 +11,6 @@ const MovieCard = ({ title, poster_path, vote_average, id }) => {
 
   const handleClick = () => {
     navigate(`/details:${id}`);
-    // if (currentUser) {
-    // } else {
-    //   alert('Plesae Login');
-    //   navigate(`/login`);
-    // }
   };
   console.log(Boolean(currentUser));
   return (

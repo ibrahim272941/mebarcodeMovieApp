@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import { useContext, useEffect, useState } from 'react';
 import { Spinner, Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -28,10 +29,13 @@ const UserComment = () => {
   const handleDelete = async (id) => {
     deleteComment(id);
     setCount(true);
-    // getComment();
   };
   const handleEdit = (id, comment, localId) => {
     navigate(`/details:${id}`, { state: { comment, localId } });
+    console.log(localId);
+  };
+  const handleDetails = (commentId) => {
+    navigate(`/details:${commentId}`);
   };
   return (
     <>
@@ -65,6 +69,7 @@ const UserComment = () => {
                 <tr key={i} className="commentTable">
                   <td>
                     <img
+                      onClick={() => handleDetails(comment[item].filmId)}
                       className="commentImg"
                       src={`${IMG_API}${comment[item].filmPoster}`}
                       alt=""
@@ -76,27 +81,29 @@ const UserComment = () => {
                     <p>{comment[item].filmComment}</p>
 
                     {comment[item].user === displayName ? (
-                      <div className="buttonGroupEdit">
-                        <button
-                          onClick={() =>
-                            handleEdit(
-                              comment[item].filmId,
-                              comment[item].filmComment,
-                              item
-                            )
-                          }
-                          className="edit"
-                        >
-                          {/* <Link to={`/details:${comment[item].filmId}`}>Edit</Link> */}
-                          Edit
-                        </button>
-                        <button
-                          onClick={() => handleDelete(item)}
-                          className="delete"
-                        >
-                          Delete
-                        </button>
-                      </div>
+                      <>
+                        <div className="buttonGroupEdit">
+                          <button
+                            onClick={() =>
+                              handleEdit(
+                                comment[item].filmId,
+                                comment[item].filmComment,
+                                item
+                              )
+                            }
+                            className="edit"
+                          >
+                            {/* <Link to={`/details:${comment[item].filmId}`}>Edit</Link> */}
+                            <Icon icon="wpf:edit" width="40%" />
+                          </button>
+                          <button
+                            onClick={() => handleDelete(item)}
+                            className="delete"
+                          >
+                            <Icon icon="wpf:delete" width="50%" />
+                          </button>
+                        </div>
+                      </>
                     ) : null}
                   </td>
                 </tr>

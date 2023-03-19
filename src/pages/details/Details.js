@@ -31,7 +31,7 @@ const Details = () => {
 
   useEffect(() => {
     getDetails(id, API_KEY);
-    getComment();
+    // getComment();
   }, [id]);
 
   const getDetails = async (id, apiKey) => {
@@ -48,23 +48,16 @@ const Details = () => {
       console.log(error);
     }
   };
-  const getComment = async () => {
-    const { data } = await axios.get(`${URL}/comment.json`);
-    setComment(data);
-  };
-  const filteredComment = comment
-    ? Object.keys(comment)
-        .map((e) => (comment[e].filmId === id.substring(1) ? comment[e] : null))
-        .filter((e) => e !== null)
-    : null;
+  // const getComment = async () => {
+  //   const { data } = await axios.get(`${URL}/comment.json`);
+  //   setComment(data);
+  // };
 
   return (
     <div
+      className="details"
       style={{
         backgroundImage: `url(${IMG_API}${backdrop_path})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
       }}
     >
       <div className="trailer">

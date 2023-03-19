@@ -26,7 +26,7 @@ const PrivateRouter = ({ count }) => {
       ) : currentUser ? (
         <Outlet />
       ) : (
-        <Navigate to="/login" />
+        <Navigate to="/register" />
       )}
     </>
   );

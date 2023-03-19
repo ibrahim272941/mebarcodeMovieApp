@@ -34,16 +34,18 @@ const Cast = ({ id }) => {
     <>
       {/* <p className="castinTitle">Casting</p> */}
       <div className="castingDiv">
-        {cast?.map((item, i) => (
-          <div key={item.id} className="cast">
-            <img src={`${IMG_API}${item.profile_path}`} alt="" />
-            <div className="castInfo">
-              <p onClick={() => handlePerson(item.id)} className="name">
-                {item.name}
-              </p>
+        {cast?.map((item, i) =>
+          item.profile_path ? (
+            <div key={item.id} className="cast">
+              <img src={`${IMG_API}${item.profile_path}`} alt="" />
+              <div className="castInfo">
+                <p onClick={() => handlePerson(item.id)} className="name">
+                  {item.name}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ) : null
+        )}
       </div>
     </>
   );

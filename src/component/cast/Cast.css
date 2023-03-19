@@ -2,21 +2,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-
     margin: 1rem auto;
+    width: 50vw;
+
 }
 
 .cast {
+    width: 20%;
+    margin: .3rem;
 
-    width: 8rem;
-    height: 8rem;
-    margin: .6rem;
-    position: relative;
-    box-shadow: 2px 2px 2px rgba(231, 229, 229, 0.568);
-    overflow: hidden;
-    border-radius: 999px;
-    background-color: rgba(8, 8, 8, 0.422);
+    /* position: relative; */
+    /* box-shadow: 2px 2px 2px rgba(231, 229, 229, 0.568); */
+    /* overflow: hidden; */
+
+    /* background-color: rgba(8, 8, 8, 0.422); */
+
 
 }
 
@@ -29,68 +29,56 @@
 }
 
 .cast img {
-    width: 80%;
+    width: 100%;
 }
 
 .castInfo {
     height: 50%;
-    background-color: rgba(0, 0, 0, 0.37);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    /* background-color: rgba(0, 0, 0, 0.37); */
+    /* position: absolute; */
+
     font-size: 70%;
     color: rgb(247, 215, 173);
-    transform: translateY(100%);
+    /* transform: translateY(100%); */
     letter-spacing: .1rem;
-    transition: transform .7s ease-in-out;
+    /* transition: transform .7s ease-in-out; */
     font-weight: 700;
 }
 
-.cast:hover .castInfo {
-    transform: translateY(0);
-
-}
-
-@media(max-width:700px) {
-    .castingDiv {
-        width: 45%;
-    }
-
-    .cast {
-
-        width: 3.5rem;
-        height: 3.5rem;
 
 
-    }
-}
 
-@media(max-width:600px) {
-    .cast {
-
-        width: 3.4rem;
-        height: 3.4rem;
-
-
-    }
-}
-
-@media(max-width:400px) {
-    .cast {
-
-        width: 3rem;
-        height: 3rem;
-
-
-    }
-
+@media(max-width:650px) {
     .castingDiv {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin: 1rem auto;
+        width: 60vw;
+
+    }
+
+    .cast {
+        width: 30%;
+        margin-right: .4rem;
 
 
-        margin: auto;
+
+    }
+
+    .cast img {
+        width: 100%;
+    }
+
+    .castInfo {
+
+
+
+        font-size: 60%;
+        color: rgb(247, 215, 173);
+
+        letter-spacing: .1rem;
+
+        font-weight: 700;
     }
 }
