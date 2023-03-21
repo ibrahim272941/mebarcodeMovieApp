@@ -43,6 +43,7 @@
     letter-spacing: .1rem;
     /* transition: transform .7s ease-in-out; */
     font-weight: 700;
+    cursor: pointer;
 }
 
 

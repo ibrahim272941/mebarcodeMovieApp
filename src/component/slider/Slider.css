@@ -85,4 +85,14 @@
     .title {
         font-size: .8rem;
     }
+
+    .corusselContainer {
+        width: 95%;
+
+
+    }
+
+    .divImage {
+        height: 12rem;
+    }
 }

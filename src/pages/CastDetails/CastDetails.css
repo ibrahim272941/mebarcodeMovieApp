@@ -1,0 +1,121 @@
+  .personImg {
+      width: 25%;
+
+      border-radius: 1rem;
+      box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
+  }
+
+  p {
+      color: white;
+  }
+
+  .personTop {
+      margin: 1rem;
+  }
+
+  .personName {
+      font-size: 1.5rem;
+      font-weight: 700;
+  }
+
+  .personBio {
+      font-size: .8rem;
+  }
+
+
+  .castinFilmInfo {
+      margin-top: 1rem;
+  }
+
+  .castingFilmName {
+      font-weight: 700;
+      font-size: .8rem;
+  }
+
+  .castingName {
+      font-size: .8rem;
+  }
+
+  .castingContainer {
+
+      display: flex;
+
+      flex-direction: column;
+      align-items: center;
+
+      width: 20rem;
+
+
+
+
+  }
+
+  .personCastingImg {
+      width: 50%;
+
+      border-radius: 1rem;
+      box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
+  }
+
+  .filmography {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+
+
+  }
+
+  @media(max-width:780px) {}
+
+  @media(max-width:525px) {
+      .personImg {
+          width: 45%;
+          margin: 1rem;
+          border-radius: 1rem;
+          box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
+
+      }
+
+      .personTop {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      p {
+          color: white;
+      }
+
+      .personName {
+          font-size: 1.5rem;
+          font-weight: 700;
+          display: flex;
+          justify-content: center;
+      }
+
+      .personBio {
+          font-size: .8rem;
+          margin: .6rem;
+      }
+
+      .castingContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+      }
+
+      .castinFilmInfo {
+          margin-top: 1rem;
+      }
+
+      .castingFilmName {
+          font-weight: 700;
+      }
+
+      .castingName {
+          font-size: .8rem;
+      }
+
+  }

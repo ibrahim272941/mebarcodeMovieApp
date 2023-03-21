@@ -3,13 +3,14 @@ import axios from 'axios';
 
 export const CastContext = createContext();
 const API_KEY = '0dfeb1e3115d788bdd6ccd6d217d93cf';
-const IMG_API = 'https://image.tmdb.org/t/p/original';
+
 const CastContextProvider = (prop) => {
   const [cast, setCast] = useState();
   const [id, setCastId] = useState();
+  const [personBio, setPersonBio] = useState();
+  const [personMovie, setPersonMovie] = useState();
   useEffect(() => {
     getReviews();
-    //handlePerson();
   }, [id]);
   const getReviews = async () => {
     const {
@@ -30,10 +31,14 @@ const CastContextProvider = (prop) => {
       `https://api.themoviedb.org/3/person/${personId}/movie_credits?api_key=${API_KEY}`,
     ];
     const data = urls.map((url) => axios.get(url));
-    axios.all(data).then((res) => console.log(res[0].data));
+    axios.all(data).then((res) => setPersonBio(res[0].data));
+    axios.all(data).then((res) => setPersonMovie(res[1].data.cast));
   };
+  console.log(personBio);
   return (
-    <CastContext.Provider value={{ setCastId, cast, handlePerson }}>
+    <CastContext.Provider
+      value={{ personMovie, personBio, setCastId, cast, handlePerson }}
+    >
       {prop.children}
     </CastContext.Provider>
   );

@@ -20,7 +20,7 @@
 }
 
 .movieSwipper {
-    width: 14rem;
+    width: 13rem;
 
 
 }
@@ -32,6 +32,12 @@
 
 
 
+
+
+    }
+
+    .movieSwipper {
+        width: 11rem;
 
 
     }
@@ -79,6 +85,7 @@
     .sliderItem {
 
         margin-left: 6rem;
+        padding: 1rem;
 
 
 
@@ -87,7 +94,7 @@
     }
 
     .movieSwipper {
-        width: 9rem;
+        width: 8.5rem;
 
 
     }
