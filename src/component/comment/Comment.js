@@ -21,7 +21,7 @@ const Comment = ({ filmInfo, state }) => {
     filmTitle: filmInfo.title,
     filmPoster: filmInfo.poster_path,
     filmComment: comment,
-    filmId: filmInfo.id.substring(1),
+    filmId: filmInfo.id,
   };
   const handleSubmit = async () => {
     if (!state) {

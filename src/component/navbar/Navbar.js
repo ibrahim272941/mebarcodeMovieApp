@@ -16,7 +16,7 @@ const Navbar = ({ count }) => {
 
   return (
     <>
-      {path.includes('details') ? null : (
+      {path.includes(':') ? null : (
         <div className="navbar">
           <div className="title">
             <Link

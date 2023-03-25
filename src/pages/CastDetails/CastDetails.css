@@ -1,8 +1,9 @@
   .personImg {
-      width: 25%;
+      width: 15%;
 
       border-radius: 1rem;
       box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);
+      margin-right: 1rem;
   }
 
   p {
@@ -10,7 +11,9 @@
   }
 
   .personTop {
-      margin: 1rem;
+      margin: 2rem 1rem 3rem 1rem;
+      display: flex;
+
   }
 
   .personName {
@@ -66,11 +69,11 @@
 
   }
 
-  @media(max-width:780px) {}
 
-  @media(max-width:525px) {
+
+  @media(max-width:775px) {
       .personImg {
-          width: 45%;
+          width: 35%;
           margin: 1rem;
           border-radius: 1rem;
           box-shadow: 5px -2px 8px rgba(231, 229, 229, 0.568);

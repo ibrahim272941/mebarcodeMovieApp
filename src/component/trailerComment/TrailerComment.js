@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import './TrailerComment.css';
-const IMG_API = 'https://image.tmdb.org/t/p/original';
+
 const URL = `https://mebarcode-91813-default-rtdb.europe-west1.firebasedatabase.app`;
 const TrailerComment = () => {
   const [comment, setComment] = useState();
@@ -11,7 +11,7 @@ const TrailerComment = () => {
   useEffect(() => {
     getComment();
   }, [id]);
-  console.log(comment);
+
   const getComment = async () => {
     const { data } = await axios.get(`${URL}/comment.json`);
     setComment(data);
@@ -19,7 +19,7 @@ const TrailerComment = () => {
   const filmComment = comment
     ? Object.values(comment)?.filter((e) => e.filmId == id.substring(1))
     : null;
-  console.log(filmComment);
+
   return (
     <>
       <Table className="tableTrailer">
