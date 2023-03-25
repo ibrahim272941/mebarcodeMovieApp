@@ -1,10 +1,14 @@
 import './CastDetails.css';
 import { useContext } from 'react';
 import { CastContext } from '../../context/CastContext';
+import { useNavigate } from 'react-router-dom';
 const IMG_API = 'https://image.tmdb.org/t/p/original';
 export const CastDetails = () => {
   const { personBio, personMovie } = useContext(CastContext);
-  console.log(personMovie);
+  const navigate = useNavigate();
+  const handleSubmit = (id) => {
+    navigate(`/details:${id}`);
+  };
   return (
     <>
       {personBio && personMovie ? (
@@ -25,6 +29,7 @@ export const CastDetails = () => {
                 {item.poster_path ? (
                   <>
                     <img
+                      onClick={() => handleSubmit(item.id)}
                       className="personCastingImg"
                       src={`${IMG_API}${item.poster_path}`}
                       alt=""

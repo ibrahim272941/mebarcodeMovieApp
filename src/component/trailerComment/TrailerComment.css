@@ -1,64 +1,43 @@
-/* .commentImg {
-    width: 7rem;
-    margin: auto;
-    height: 7rem;
-}
-
 .commentTable {
 
     color: antiquewhite;
 
 
+
 }
 
 .tableTrailer {
-    background-color: rgba(2, 63, 93, 0.171);
-    margin: auto;
-    margin-top: 2rem;
-    text-align: center;
+    background-color: rgba(29, 26, 26, 0.97);
+    margin: 2rem 0 1rem 1rem;
+
+    text-align: left;
     border-radius: .2rem;
-    width: 90%;
+    width: 60%;
 
 
 
 }
+
+
 
 .tableTrailer p {
-    font-weight: 600;
-    text-align: center;
-    margin: auto;
+    font-weight: 400;
+    text-align: left;
+
     color: antiquewhite;
 }
 
-.buttonGroupEdit {
+.commentUser {
+    background-color: rgb(62, 50, 50);
+    border-radius: 2rem;
+    padding: .6rem;
 
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
+    width: 80%;
+    box-shadow: 1px 1px 2px rgba(231, 229, 229, 0.568);
 
 
 }
 
-.edit {
-    width: 40%;
-    font-size: .7rem;
-    background-color: rgb(231, 92, 5);
-    border: none;
-    outline: none;
-    color: antiquewhite;
-    border-radius: .5rem;
-}
-
-.delete {
-    width: 40%;
-    padding: .2rem;
-    font-size: .7rem;
-    background-color: rgb(83, 1, 1);
-    border: none;
-    outline: none;
-    color: antiquewhite;
-    border-radius: .5rem;
-}
 
 @media(max-width:680px) {
     .commentImg {
@@ -70,6 +49,18 @@
     .commentTable {
 
         font-size: .7rem;
+
+
+    }
+
+    .tableTrailer {
+        background-color: rgba(13, 13, 13, 0.97);
+        margin: auto;
+        margin-top: 2rem;
+
+        border-radius: .2rem;
+        width: 70%;
+
 
 
     }
@@ -89,48 +80,15 @@
 
     }
 
-    .edit {
-        width: 45%;
-        font-size: .5rem;
-        border-radius: .3rem;
-
-    }
-
-    .delete {
-        width: 45%;
-        font-size: .5rem;
-        border-radius: .3rem;
-
-    }
-
-}
-
-@media(max-width:425px) {
-    .commentImg {
-        width: 2.5rem;
+    .tableTrailer {
+        background-color: rgba(13, 13, 13, 0.97);
         margin: auto;
-        height: 2.5rem;
-    }
+        margin-top: 2rem;
 
-    .commentTable {
+        border-radius: .2rem;
+        width: 80%;
 
-        font-size: .4rem;
-
-
-    }
-
-    .edit {
-
-        width: 45%;
-        font-size: .4rem;
 
 
     }
-
-    .delete {
-        width: 45%;
-        font-size: .4rem;
-
-    }
-
-} */
+}

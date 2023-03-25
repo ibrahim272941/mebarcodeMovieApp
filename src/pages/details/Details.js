@@ -32,7 +32,7 @@ const Details = () => {
 
   useEffect(() => {
     getDetails(id, API_KEY);
-    // getComment();
+
     setItemId(id);
   }, [id, setItemId]);
 
@@ -50,10 +50,10 @@ const Details = () => {
       console.log(error);
     }
   };
-  // const getComment = async () => {
-  //   const { data } = await axios.get(`${URL}/comment.json`);
-  //   setComment(data);
-  // };
+
+  // const filmComment = Object.values(comment)?.filter(
+  //   (e) => e.filmId == id.substring(1)
+  // );
 
   return (
     <div
@@ -92,9 +92,8 @@ const Details = () => {
             alt="img"
           /> */}
       </div>
-
-      {/* <TrailerComment comment={filteredComment} /> */}
       <Comment state={state} filmInfo={filmInfo} />
+      <TrailerComment />
     </div>
   );
 };

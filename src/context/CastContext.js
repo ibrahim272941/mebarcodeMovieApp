@@ -34,7 +34,7 @@ const CastContextProvider = (prop) => {
     axios.all(data).then((res) => setPersonBio(res[0].data));
     axios.all(data).then((res) => setPersonMovie(res[1].data.cast));
   };
-  console.log(personBio);
+
   return (
     <CastContext.Provider
       value={{ personMovie, personBio, setCastId, cast, handlePerson }}
